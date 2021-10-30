@@ -1,0 +1,1098 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<audioRoutingConfiguration version="1.0" xmlns:xi="http://www.w3.org/2001/XInclude">
+    <audioswitch>
+        <switch name="tinyalsaport" enable="0"/>
+        <switch name="interleaved_dl" enable="0"/>
+        <switch name="interleaved_ul" enable="0"/>
+        <switch name="graph" enable="1"/>
+    </audioswitch>
+
+    <devicesconf>
+        <device id="1"
+            type="AUDIO_DEVICE_OUT_SPEAKER"
+            source=""
+            busaddress="bus0_media_out"
+            channelmap=""
+            rate=""/>
+        <device id="2"
+            type="AUDIO_DEVICE_OUT_BUS"
+            source=""
+            busaddress="bus0_media_out"
+            channelmap=""
+            rate=""/>
+        <device id="3"
+            type="AUDIO_DEVICE_OUT_BUS"
+            source=""
+            busaddress="bus1_navigation_out"
+            channelmap=""
+            rate=""/>
+        <device id="4"
+            type="AUDIO_DEVICE_OUT_BUS"
+            source=""
+            busaddress="bus2_voice_command_out"
+            channelmap=""
+            rate=""/>
+        <device id="5"
+            type="AUDIO_DEVICE_OUT_BUS"
+            source=""
+            busaddress="bus3_call_ring_out"
+            channelmap=""
+            rate=""/>
+        <device id="6"
+            type="AUDIO_DEVICE_OUT_BUS"
+            source=""
+            busaddress="bus4_call_out"
+            channelmap=""
+            rate=""/>
+        <device id="7"
+            type="AUDIO_DEVICE_OUT_BUS"
+            source=""
+            busaddress="bus5_alarm_out"
+            channelmap=""
+            rate=""/>
+        <device id="8"
+            type="AUDIO_DEVICE_OUT_BUS"
+            source=""
+            busaddress="bus6_notification_out"
+            channelmap=""
+            rate=""/>
+        <device id="9"
+            type="AUDIO_DEVICE_OUT_BUS"
+            source=""
+            busaddress="bus7_system_sound_out"
+            channelmap=""
+            rate=""/>
+        <device id="10"
+            type="AUDIO_DEVICE_IN_BUILTIN_MIC"
+            source="AUDIO_SOURCE_MIC"
+            busaddress="DefaultMic"
+            channelmap=""
+            rate=""/>
+        <device id="11"
+            type="AUDIO_DEVICE_IN_BUILTIN_MIC"
+            source="AUDIO_SOURCE_DEFAULT"
+            busaddress="DefaultMic"
+            channelmap=""
+            rate=""/>
+        <device id="12"
+            type="AUDIO_DEVICE_IN_BUILTIN_MIC"
+            source="AUDIO_SOURCE_VOICE_RECOGNITION"
+            ecnrcase="Projection_VR_Uplink"
+            busaddress="Projection_VR_Uplink"
+            channelmap=""
+            rate=""/>
+        <device id="13"
+            type="AUDIO_DEVICE_IN_BUILTIN_MIC"
+            source="AUDIO_SOURCE_VOICE_COMMUNICATION"
+            ecnrcase="PhoneCall_Uplink"
+            busaddress="Voice_Uplink"
+            channelmap=""
+            rate=""/>
+        <device id="14"
+            type="AUDIO_DEVICE_IN_BUILTIN_MIC"
+            source="AUDIO_SOURCE_VOICE_RECOGNITION"
+            ecnrcase="Native_VR_Uplink"
+            busaddress="Native_VR_Uplink"
+            channelmap=""
+            rate=""/>
+        <device id="15"
+            type="AUDIO_DEVICE_IN_FM_TUNER"
+            source="AUDIO_SOURCE_MIC"
+            busaddress="Tuner_Uplink"
+            channelmap=""
+            rate=""/>
+        <device id="16"
+            type="AUDIO_DEVICE_IN_ECHO_REFERENCE"
+            source="AUDIO_SOURCE_ECHO_REFERENCE"
+            busaddress="EchoRef"
+            channelmap=""
+            rate=""/>
+    </devicesconf>
+    <alsaportsconf>
+         <port id="1"
+            name="pcmMicIn_c"
+            channels="2"
+            rate="48000"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="384"
+            periodcount="6"
+            startthreshold="384"
+            stopthreshold="2304"
+            silencethreshold="0"
+            silencesize="0"
+            availmin="0"
+            clock="100000000"
+            access="SND_PCM_ACCESS_RW_INTERLEAVED"
+            channelmap=""/>
+         <port id="2"
+            name="pcmTunerIn_c"
+            channels="2"
+            rate="48000"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="1536"
+            periodcount="4"
+            startthreshold="1536"
+            stopthreshold="6144"
+            silencethreshold="0"
+            silencesize="0"
+            availmin="0"
+            clock="100000000"
+            access="SND_PCM_ACCESS_RW_INTERLEAVED"
+            channelmap=""/>
+         <port id="3"
+            name="pcmExVirtualBus"
+            channels="2"
+            rate="48000"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="384"
+            periodcount="4"
+            startthreshold="768"
+            stopthreshold="1536"
+            silencethreshold="0"
+            silencesize="0"
+            availmin="0"
+            clock="100000000"
+            access="SND_PCM_ACCESS_RW_INTERLEAVED"
+            channelmap=""/>
+         <port id="4"
+            name="pcmMedia_p"
+            channels="2"
+            rate="48000"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="384"
+            periodcount="3"
+            startthreshold="768"
+            stopthreshold="1152"
+            silencethreshold="0"
+            silencesize="0"
+            availmin="0"
+            clock="100000000"
+            access="SND_PCM_ACCESS_RW_INTERLEAVED"
+            channelmap=""
+            alwaysOn="1"/>
+        <port id="5"
+            name="pcmBtHfp_dl_pre_c"
+            channels="1"
+            rate="16000"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="128"
+            periodcount="3"
+            startthreshold="128"
+            stopthreshold="384"
+            silencethreshold="0"
+            silencesize="0"
+            availmin="0"
+            clock="100000000"
+            access="SND_PCM_ACCESS_RW_INTERLEAVED"
+            channelmap=""/>
+        <port id="6"
+            name="pcmBtHfp_dl_pre_c"
+            channels="1"
+            rate="8000"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="64"
+            periodcount="3"
+            startthreshold="64"
+            stopthreshold="192"
+            silencethreshold="0"
+            silencesize="0"
+            availmin="0"
+            clock="100000000"
+            access="SND_PCM_ACCESS_RW_INTERLEAVED"
+            channelmap=""/>
+        <port id="7"
+            name="pcmBtHfp_ul_pro_p"
+            channels="1"
+            rate="16000"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="128"
+            periodcount="3"
+            startthreshold="256"
+            stopthreshold="384"
+            silencethreshold="0"
+            silencesize="0"
+            availmin="0"
+            clock="100000000"
+            access="SND_PCM_ACCESS_RW_INTERLEAVED"
+            channelmap=""/>
+        <port id="8"
+            name="pcmBtHfp_ul_pro_p"
+            channels="1"
+            rate="8000"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="64"
+            periodcount="3"
+            startthreshold="128"
+            stopthreshold="192"
+            silencethreshold="0"
+            silencesize="0"
+            availmin="0"
+            clock="100000000"
+            access="SND_PCM_ACCESS_RW_INTERLEAVED"
+            channelmap=""/>
+        <port id="9"
+            name="pcmMicRefIn_c"
+            channels="4"
+            rate="48000"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="384"
+            periodcount="3"
+            startthreshold="384"
+            stopthreshold="1152"
+            silencethreshold="0"
+            silencesize="0"
+            availmin="0"
+            clock="100000000"
+            access="SND_PCM_ACCESS_RW_INTERLEAVED"
+            channelmap=""/>
+        <port id="10"
+            name="pcmRefIn_c"
+            channels="2"
+            rate="48000"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="384"
+            periodcount="3"
+            startthreshold="384"
+            stopthreshold="1152"
+            silencethreshold="0"
+            silencesize="0"
+            availmin="0"
+            clock="100000000"
+            access="SND_PCM_ACCESS_RW_INTERLEAVED"
+            channelmap=""/>
+        <port id="11"
+            name="pcmNavi_p"
+            channels="1"
+            rate="48000"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="384"
+            periodcount="3"
+            startthreshold="384"
+            stopthreshold="1152"
+            silencethreshold="0"
+            silencesize="0"
+            availmin="0"
+            clock="100000000"
+            access="SND_PCM_ACCESS_RW_INTERLEAVED"
+            channelmap=""/>
+         <port id="12"
+            name="pcmRing_p"
+            channels="1"
+            rate="48000"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="384"
+            periodcount="3"
+            startthreshold="768"
+            stopthreshold="1152"
+            silencethreshold="0"
+            silencesize="0"
+            availmin="0"
+            clock="100000000"
+            access="SND_PCM_ACCESS_RW_INTERLEAVED"
+            channelmap=""/>
+         <port id="13"
+            name="pcmAlarm_p"
+            channels="1"
+            rate="48000"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="384"
+            periodcount="3"
+            startthreshold="768"
+            stopthreshold="1152"
+            silencethreshold="0"
+            silencesize="0"
+            availmin="0"
+            clock="100000000"
+            access="SND_PCM_ACCESS_RW_INTERLEAVED"
+            channelmap=""/>
+         <port id="14"
+            name="pcmNotify_p"
+            channels="1"
+            rate="48000"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="384"
+            periodcount="3"
+            startthreshold="768"
+            stopthreshold="1152"
+            silencethreshold="0"
+            silencesize="0"
+            availmin="0"
+            clock="100000000"
+            access="SND_PCM_ACCESS_RW_INTERLEAVED"
+            channelmap=""/>
+         <port id="15"
+            name="pcmSysSound_p"
+            channels="1"
+            rate="48000"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="384"
+            periodcount="3"
+            startthreshold="768"
+            stopthreshold="1152"
+            silencethreshold="0"
+            silencesize="0"
+            availmin="0"
+            clock="100000000"
+            access="SND_PCM_ACCESS_RW_INTERLEAVED"
+            channelmap=""/>
+         <port id="16"
+            name="pcmVoiceCmd_p"
+            channels="1"
+            rate="48000"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="384"
+            periodcount="3"
+            startthreshold="768"
+            stopthreshold="1152"
+            silencethreshold="0"
+            silencesize="0"
+            availmin="0"
+            clock="100000000"
+            access="SND_PCM_ACCESS_RW_INTERLEAVED"
+            channelmap=""/>
+         <port id="17"
+            name="pcmCall_p"
+            channels="1"
+            rate="48000"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="512"
+            periodcount="3"
+            startthreshold="1024"
+            stopthreshold="1536"
+            silencethreshold="0"
+            silencesize="0"
+            availmin="0"
+            clock="100000000"
+            access="SND_PCM_ACCESS_RW_INTERLEAVED"
+            channelmap=""/>
+         <port id="18"
+            name="pcmHfp_dl_p"
+            channels="1"
+            rate="48000"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="384"
+            periodcount="3"
+            startthreshold="768"
+            stopthreshold="1152"
+            silencethreshold="0"
+            silencesize="0"
+            availmin="0"
+            clock="100000000"
+            access="SND_PCM_ACCESS_RW_INTERLEAVED"
+            channelmap=""/>
+    </alsaportsconf>
+
+    <moduleslist>
+        <module id="1"
+            uuid="10001"
+            name="sse_projection_call_dl_48k"
+            type="MODULE_TYPE_EFFECT_BLOCK"
+            rate="48000"
+            channels="1"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="512"
+            periodcount="3"
+            inputportnum="1"
+            outputportnum="1"
+            threadcount=""
+            library="/vendor/lib64/libaudioprocessingplugin-sse.so"/>
+        <module id="2"
+            uuid="30001"
+            name="datacollector"
+            type="MODULE_TYPE_DATA_COLLECTOR"
+            rate="48000"
+            channels="10"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="384"
+            periodcount="6"
+            inputportnum="9"
+            outputportnum="1"
+            threadcount="1"
+            library=""/>
+        <module id="3"
+            uuid="10002"
+            name="audioworx"
+            type="MODULE_TYPE_EFFECT_BLOCK"
+            rate="48000"
+            channels="10"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="768"
+            periodcount="3"
+            inputportnum="1"
+            outputportnum="1"
+            threadcount=""
+            library="/vendor/lib64/libaudioprocessingplugin-awx.so"/>
+        <module id="4"
+            uuid="10011"
+            name="sse_bt_call_ul"
+            type="MODULE_TYPE_EFFECT_BLOCK"
+            rate="8000"
+            channels="4"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="128"
+            periodcount="3"
+            inputportnum="1"
+            outputportnum="1"
+            threadcount=""
+            library="/vendor/lib64/libaudioprocessingplugin-sse.so"/>
+        <module id="5"
+            uuid="10012"
+            name="sse_bt_call_ul"
+            type="MODULE_TYPE_EFFECT_BLOCK"
+            rate="16000"
+            channels="4"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="256"
+            periodcount="3"
+            inputportnum="1"
+            outputportnum="1"
+            threadcount=""
+            library="/vendor/lib64/libaudioprocessingplugin-sse.so"/>
+        <module id="6"
+            uuid="30002"
+            name="bt_loopback_ul"
+            type="MODULE_TYPE_LOOPBACK"
+            rate="8000"
+            channels="1"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="64"
+            periodcount="3"
+            inputportnum="1"
+            outputportnum="1"
+            threadcount="2"
+            library=""/>
+        <module id="7"
+            uuid="30003"
+            name="bt_loopback_ul"
+            type="MODULE_TYPE_LOOPBACK"
+            rate="16000"
+            channels="1"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="128"
+            periodcount="3"
+            inputportnum="1"
+            outputportnum="1"
+            threadcount="2"
+            library=""/>
+        <module id="8"
+            uuid="10009"
+            name="sse_bt_call_dl"
+            type="MODULE_TYPE_EFFECT_BLOCK"
+            rate="8000"
+            channels="1"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="128"
+            periodcount="3"
+            inputportnum="1"
+            outputportnum="1"
+            threadcount=""
+            library="/vendor/lib64/libaudioprocessingplugin-sse.so"/>
+        <module id="9"
+            uuid="10010"
+            name="sse_bt_call_dl"
+            type="MODULE_TYPE_EFFECT_BLOCK"
+            rate="16000"
+            channels="1"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="256"
+            periodcount="3"
+            inputportnum="1"
+            outputportnum="1"
+            threadcount=""
+            library="/vendor/lib64/libaudioprocessingplugin-sse.so"/>
+        <module id="10"
+            uuid="10007"
+            name="sse_projection_call_ul"
+            type="MODULE_TYPE_EFFECT_BLOCK"
+            rate="8000"
+            channels="4"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="128"
+            periodcount="3"
+            inputportnum="1"
+            outputportnum="1"
+            threadcount=""
+            library="/vendor/lib64/libaudioprocessingplugin-sse.so"/>
+        <module id="11"
+            uuid="10008"
+            name="sse_projection_call_ul"
+            type="MODULE_TYPE_EFFECT_BLOCK"
+            rate="16000"
+            channels="4"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="256"
+            periodcount="3"
+            inputportnum="1"
+            outputportnum="1"
+            threadcount=""
+            library="/vendor/lib64/libaudioprocessingplugin-sse.so"/>
+        <module id="12"
+            uuid="10006"
+            name="sse_projection_call_ul"
+            type="MODULE_TYPE_EFFECT_BLOCK"
+            rate="24000"
+            channels="4"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="256"
+            periodcount="3"
+            inputportnum="1"
+            outputportnum="1"
+            threadcount=""
+            library="/vendor/lib64/libaudioprocessingplugin-sse.so"/>
+        <module id="13"
+            uuid="10017"
+            name="sse_vr_dl_48k"
+            type="MODULE_TYPE_EFFECT_BLOCK"
+            rate="48000"
+            channels="1"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="512"
+            periodcount="3"
+            inputportnum="1"
+            outputportnum="1"
+            threadcount=""
+            library="/vendor/lib64/libaudioprocessingplugin-sse.so"/>
+        <module id="14"
+            uuid="10018"
+            name="sse_native_vr_ul"
+            type="MODULE_TYPE_EFFECT_BLOCK"
+            rate="16000"
+            channels="4"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="256"
+            periodcount="3"
+            inputportnum="1"
+            outputportnum="1"
+            threadcount=""
+            library="/vendor/lib64/libaudioprocessingplugin-sse.so"/>
+        <module id="15"
+            uuid="10019"
+            name="sse_native_vr_ul"
+            type="MODULE_TYPE_EFFECT_BLOCK"
+            rate="24000"
+            channels="4"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="256"
+            periodcount="3"
+            inputportnum="1"
+            outputportnum="1"
+            threadcount=""
+            library="/vendor/lib64/libaudioprocessingplugin-sse.so"/>
+        <module id="16"
+            uuid="10020"
+            name="sse_native_vr_ul"
+            type="MODULE_TYPE_EFFECT_BLOCK"
+            rate="48000"
+            channels="4"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="512"
+            periodcount="3"
+            inputportnum="1"
+            outputportnum="1"
+            threadcount=""
+            library="/vendor/lib64/libaudioprocessingplugin-sse.so"/>
+        <module id="17"
+            uuid="30004"
+            name="bt_loopback_dl"
+            type="MODULE_TYPE_LOOPBACK"
+            rate="8000"
+            channels="1"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="64"
+            periodcount="3"
+            inputportnum="1"
+            outputportnum="1"
+            threadcount="1"
+            library=""/>
+        <module id="18"
+            uuid="30005"
+            name="bt_loopback_dl"
+            type="MODULE_TYPE_LOOPBACK"
+            rate="16000"
+            channels="1"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="128"
+            periodcount="3"
+            inputportnum="1"
+            outputportnum="1"
+            threadcount="1"
+            library=""/>
+        <module id="19"
+            uuid="30006"
+            name="dispatcher_dl"
+            type="MODULE_TYPE_DATA_DISPATCHER"
+            rate="48000"
+            channels="10"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="384"
+            periodcount="3"
+            inputportnum="1"
+            outputportnum="3"
+            threadcount=""
+            library=""/>
+        <module id="20"
+            uuid="30007"
+            name="loopback_ref_for_call"
+            type="MODULE_TYPE_LOOPBACK"
+            rate="48000"
+            channels="2"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="384"
+            periodcount="3"
+            inputportnum="1"
+            outputportnum="1"
+            threadcount=""
+            library=""/>
+        <module id="21"
+            uuid="30008"
+            name="datacollector_call_ul"
+            type="MODULE_TYPE_DATA_COLLECTOR"
+            rate="16000"
+            channels="4"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="128"
+            periodcount="6"
+            inputportnum="2"
+            outputportnum="1"
+            threadcount=""
+            library=""/>
+        <module id="22"
+            uuid="30009"
+            name="datacollector_call_ul"
+            type="MODULE_TYPE_DATA_COLLECTOR"
+            rate="24000"
+            channels="4"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="192"
+            periodcount="6"
+            inputportnum="2"
+            outputportnum="1"
+            threadcount=""
+            library=""/>
+        <module id="23"
+            uuid="30010"
+            name="datacollector_call_ul"
+            type="MODULE_TYPE_DATA_COLLECTOR"
+            rate="48000"
+            channels="4"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="384"
+            periodcount="6"
+            inputportnum="2"
+            outputportnum="1"
+            threadcount=""
+            library=""/>
+        <module id="24"
+            uuid="30011"
+            name="datacollector_call_ul"
+            type="MODULE_TYPE_DATA_COLLECTOR"
+            rate="8000"
+            channels="4"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="64"
+            periodcount="6"
+            inputportnum="2"
+            outputportnum="1"
+            threadcount=""
+            library=""/>
+        <module id="25"
+            uuid="30012"
+            name="loopback_ref_for_vr"
+            type="MODULE_TYPE_LOOPBACK"
+            rate="48000"
+            channels="2"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="384"
+            periodcount="3"
+            inputportnum="1"
+            outputportnum="1"
+            threadcount=""
+            library=""/>
+        <module id="26"
+            uuid="30013"
+            name="datacollector_vr_ul"
+            type="MODULE_TYPE_DATA_COLLECTOR"
+            rate="16000"
+            channels="4"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="128"
+            periodcount="6"
+            inputportnum="2"
+            outputportnum="1"
+            threadcount=""
+            library=""/>
+        <module id="27"
+            uuid="30014"
+            name="datacollector_vr_ul"
+            type="MODULE_TYPE_DATA_COLLECTOR"
+            rate="24000"
+            channels="4"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="192"
+            periodcount="6"
+            inputportnum="2"
+            outputportnum="1"
+            threadcount=""
+            library=""/>
+        <module id="28"
+            uuid="30015"
+            name="datacollector_vr_ul"
+            type="MODULE_TYPE_DATA_COLLECTOR"
+            rate="48000"
+            channels="4"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="384"
+            periodcount="6"
+            inputportnum="2"
+            outputportnum="1"
+            threadcount=""
+            library=""/>
+        <module id="29"
+            uuid="30016"
+            name="datacollector_vr_ul"
+            type="MODULE_TYPE_DATA_COLLECTOR"
+            rate="8000"
+            channels="4"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="64"
+            periodcount="6"
+            inputportnum="2"
+            outputportnum="1"
+            threadcount=""
+            library=""/>
+        <module id="30"
+            uuid="30017"
+            name="dispatcher_ul_for_mic_48k"
+            type="MODULE_TYPE_DATA_DISPATCHER"
+            rate="48000"
+            channels="4"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="384"
+            periodcount="6"
+            inputportnum="1"
+            outputportnum="4"
+            threadcount="1"
+            library=""/>
+         <module id="31"
+             uuid="30020"
+             name="connected_module_for_btcall_ul"
+             type="MODULE_TYPE_CONNECT"
+             rate="8000"
+             channels="4"
+             bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+             periodsize="64"
+             periodcount="3"
+             inputportnum="1"
+             outputportnum="1"
+             threadcount=""
+             library=""/>
+       <module id="32"
+             uuid="30021"
+             name="connected_module_for_btcall_ul"
+             type="MODULE_TYPE_CONNECT"
+             rate="16000"
+             channels="4"
+             bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+             periodsize="128"
+             periodcount="3"
+             inputportnum="1"
+             outputportnum="1"
+             threadcount=""
+             library=""/>
+         <module id="33"
+             uuid="30022"
+             name="connected_module_for_vc_ul"
+             type="MODULE_TYPE_CONNECT"
+             rate="8000"
+             channels="4"
+             bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+             periodsize="64"
+             periodcount="3"
+             inputportnum="1"
+             outputportnum="1"
+             threadcount=""
+             library=""/>
+       <module id="34"
+             uuid="30023"
+             name="connected_module_for_vc_ul"
+             type="MODULE_TYPE_CONNECT"
+             rate="16000"
+             channels="4"
+             bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+             periodsize="128"
+             periodcount="3"
+             inputportnum="1"
+             outputportnum="1"
+             threadcount=""
+             library=""/>
+       <module id="35"
+             uuid="30024"
+             name="connected_module_for_vc_ul"
+             type="MODULE_TYPE_CONNECT"
+             rate="24000"
+             channels="4"
+             bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+             periodsize="192"
+             periodcount="3"
+             inputportnum="1"
+             outputportnum="1"
+             threadcount=""
+             library=""/>
+       <module id="36"
+             uuid="30025"
+             name="connected_native_vr_ul"
+             type="MODULE_TYPE_CONNECT"
+             rate="16000"
+             channels="4"
+             bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+             periodsize="128"
+             periodcount="3"
+             inputportnum="1"
+             outputportnum="1"
+             threadcount=""
+             library=""/>
+       <module id="37"
+             uuid="30026"
+             name="connected_native_vr_ul"
+             type="MODULE_TYPE_CONNECT"
+             rate="24000"
+             channels="4"
+             bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+             periodsize="192"
+             periodcount="3"
+             inputportnum="1"
+             outputportnum="1"
+             threadcount=""
+             library=""/>
+        <module id="38"
+            uuid="30029"
+            name="connected_projection_vr_ul"
+            type="MODULE_TYPE_CONNECT"
+            rate="16000"
+            channels="4"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="128"
+            periodcount="3"
+            inputportnum="1"
+            outputportnum="1"
+            threadcount=""
+            library=""/>
+      <module id="39"
+            uuid="30030"
+            name="connected_projection_vr_ul"
+            type="MODULE_TYPE_CONNECT"
+            rate="24000"
+            channels="4"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="192"
+            periodcount="3"
+            inputportnum="1"
+            outputportnum="1"
+            threadcount=""
+            library=""/>
+        <module id="40"
+            uuid="30031"
+            name="connected_projection_vr_ul"
+            type="MODULE_TYPE_CONNECT"
+            rate="48000"
+            channels="4"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="384"
+            periodcount="3"
+            inputportnum="1"
+            outputportnum="1"
+            threadcount=""
+            library=""/>
+        <module id="41"
+            uuid="10029"
+            name="sse_projection_vr_ul"
+            type="MODULE_TYPE_EFFECT_BLOCK"
+            rate="16000"
+            channels="4"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="256"
+            periodcount="3"
+            inputportnum="1"
+            outputportnum="1"
+            threadcount=""
+            library="/vendor/lib64/libaudioprocessingplugin-sse.so"/>
+        <module id="42"
+            uuid="10030"
+            name="sse_projection_vr_ul"
+            type="MODULE_TYPE_EFFECT_BLOCK"
+            rate="24000"
+            channels="4"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="256"
+            periodcount="3"
+            inputportnum="1"
+            outputportnum="1"
+            threadcount=""
+            library="/vendor/lib64/libaudioprocessingplugin-sse.so"/>
+        <module id="43"
+            uuid="10031"
+            name="sse_projection_vr_ul"
+            type="MODULE_TYPE_EFFECT_BLOCK"
+            rate="48000"
+            channels="4"
+            bitwidth="AUDIO_FORMAT_PCM_32_BIT"
+            periodsize="512"
+            periodcount="3"
+            inputportnum="1"
+            outputportnum="1"
+            threadcount=""
+            library="/vendor/lib64/libaudioprocessingplugin-sse.so"/>
+    </moduleslist>
+
+    <pathconf>
+        <!-- dir: playback/capture -->
+        <!-- mode: disabled/autorun -->
+        <!--       disabled: the path is dynmicly trigger by hal thread -->
+        <!--       autorun: the path is build-in after bootup -->
+        <!--path name="common_playback_path_1" dir="playback" mode="" period="" rate="">
+            <connections>
+                <connection from="[module]:datacollector" outchmap="" to="[module]:audioworx" inchmap=""/>
+                <connection from="[module]:audioworx" outchmap="0,8" to="[device]:pcmMainOutput_p" inchmap=""/>
+            </connections>
+        </path-->
+        <path name="bus0_media_out" dir="playback" mode="" period="" rate="">
+            <connections>
+                <connection from="[stream]:bus0_media_out" outchmap="" to="[device]:pcmMedia_p" inchmap=""/>
+            </connections>
+        </path>
+        <path name="bus1_navigation_out" dir="playback" mode="" period="" rate="">
+            <connections>
+                <connection from="[stream]:bus1_navigation_out" outchmap="" to="[device]:pcmNavi_p" inchmap=""/>
+            </connections>
+        </path>
+        <path name="bus2_voice_command_out" dir="playback" mode="" period="" rate="">
+            <connections>
+                <connection from="[stream]:bus2_voice_command_out" outchmap="" to="[device]:pcmVoiceCmd_p" inchmap=""/>
+            </connections>
+        </path>
+        <path name="bus3_call_ring_out" dir="playback" mode="" period="" rate="">
+            <connections>
+                <connection from="[stream]:bus3_call_ring_out" outchmap="" to="[device]:pcmRing_p" inchmap=""/>
+            </connections>
+        </path>
+        <path name="bus4_call_out" dir="playback" mode="" period="" rate="">
+            <connections>
+                <connection from="[stream]:bus4_call_out" outchmap="" to="[module]:sse_projection_call_dl_48k" inchmap=""/>
+                <connection from="[module]:sse_projection_call_dl_48k" outchmap="" to="[device]:pcmCall_p" inchmap=""/>
+            </connections>
+        </path>
+        <path name="bus5_alarm_out" dir="playback" mode="" period="" rate="">
+            <connections>
+                <connection from="[stream]:bus5_alarm_out" outchmap="" to="[device]:pcmAlarm_p" inchmap=""/>
+            </connections>
+        </path>
+        <path name="bus6_notification_out" dir="playback" mode="" period="" rate="">
+            <connections>
+                <connection from="[stream]:bus6_notification_out" outchmap="" to="[device]:pcmNotify_p" inchmap=""/>
+            </connections>
+        </path>
+        <path name="bus7_system_sound_out" dir="playback" mode="" period="" rate="">
+            <connections>
+                <connection from="[stream]:bus7_system_sound_out" outchmap="" to="[device]:pcmSysSound_p" inchmap=""/>
+            </connections>
+        </path>
+        <path name="ExVirtualInputBus" dir="capture" mode="" period="" rate="">
+            <connections>
+                <connection from="[device]:pcmExVirtualBus" outchmap="" to="[stream]:ExVirtualInputBus" inchmap=""/>
+            </connections>
+        </path>
+        <path name="ExVirtualOutputBus" dir="playback" mode="" period="" rate="">
+            <connections>
+                <connection from="[stream]:ExVirtualOutputBus" outchmap="" to="[device]:pcmExVirtualBus" inchmap=""/>
+            </connections>
+        </path>
+        <path name="DefaultMic" dir="capture" mode="" period="" rate="">
+            <connections>
+                <connection from="[device]:pcmMicIn_c" outchmap="" to="[stream]:DefaultMic" inchmap=""/>
+            </connections>
+        </path>
+        <path name="EchoRef" dir="capture" mode="" period="" rate="">
+            <connections>
+                <connection from="[device]:pcmRefIn_c" outchmap="" to="[stream]:EchoRef" inchmap=""/>
+            </connections>
+        </path>
+        <path name="Voice_Uplink" dir="capture" mode="" period="" rate="">
+            <connections>
+                <connection from="[device]:pcmMicRefIn_c" outchmap="" to="[module]:dispatcher_ul_for_mic_48k" inchmap=""/>
+                <connection from="[module]:dispatcher_ul_for_mic_48k" outchmap="0,4" to="[module]:connected_module_for_vc_ul" inchmap=""/>
+                <connection from="[module]:connected_module_for_vc_ul" outchmap="" to="[module]:sse_projection_call_ul" inchmap=""/>
+                <connection from="[module]:sse_projection_call_ul" outchmap="" to="[stream]:Voice_Uplink" inchmap=""/>
+            </connections>
+        </path>
+        <path name="Native_VR_Uplink" dir="capture" mode="" period="" rate="">
+            <connections>
+                <connection from="[device]:pcmMicRefIn_c" outchmap="" to="[module]:dispatcher_ul_for_mic_48k" inchmap=""/>
+                <connection from="[module]:dispatcher_ul_for_mic_48k" outchmap="0,4" to="[module]:connected_native_vr_ul" inchmap=""/>
+                <connection from="[module]:connected_native_vr_ul" outchmap="" to="[module]:sse_native_vr_ul" inchmap=""/>
+                <connection from="[module]:sse_native_vr_ul" outchmap="" to="[stream]:Native_VR_Uplink" inchmap=""/>
+            </connections>
+        </path>
+        <path name="Projection_VR_Uplink" dir="capture" mode="" period="" rate="">
+            <connections>
+                <connection from="[device]:pcmMicRefIn_c" outchmap="" to="[module]:dispatcher_ul_for_mic_48k" inchmap=""/>
+                <connection from="[module]:dispatcher_ul_for_mic_48k" outchmap="0,4" to="[module]:connected_projection_vr_ul" inchmap=""/>
+                <connection from="[module]:connected_projection_vr_ul" outchmap="" to="[module]:sse_projection_vr_ul" inchmap=""/>
+                <connection from="[module]:sse_projection_vr_ul" outchmap="" to="[stream]:Projection_VR_Uplink" inchmap=""/>
+            </connections>
+        </path>
+        <path name="Tuner_Uplink" dir="capture" mode="" period="" rate="">
+            <connections>
+                <connection from="[device]:pcmTunerIn_c" outchmap="" to="[stream]:Tuner_Uplink" inchmap=""/>
+            </connections>
+        </path>
+        <path name="common_bt_uplink_path_c" dir="capture" mode="" period="" rate="">
+            <connections>
+                <connection from="[device]:pcmMicRefIn_c" outchmap="" to="[module]:dispatcher_ul_for_mic_48k" inchmap=""/>
+                <connection from="[module]:dispatcher_ul_for_mic_48k" outchmap="0,4" to="[module]:connected_module_for_btcall_ul" inchmap=""/>
+                <connection from="[module]:connected_module_for_btcall_ul" outchmap="" to="[module]:sse_bt_call_ul" inchmap=""/>
+                <connection from="[module]:sse_bt_call_ul" outchmap="" to="[tmodule]:bt_loopback_ul" inchmap=""/>
+            </connections>
+        </path>
+        <path name="common_bt_uplink_path_p" dir="playback"  mode="" period="" rate="">
+            <connections>
+                <connection from="[tmodule]:bt_loopback_ul" outchmap="" to="[device]:pcmBtHfp_ul_pro_p" inchmap=""/>
+            </connections>
+        </path>
+        <path name="Bt_Uplink_8k" dir="" mode="" period="" rate="">
+            <includes>
+                <include pathname="common_bt_uplink_path_c" type="add"/>
+                <include pathname="common_bt_uplink_path_p" type="add"/>
+            </includes>
+        </path>
+        <path name="Bt_Uplink_16k" dir="" mode="" period="" rate="">
+            <includes>
+                <include pathname="common_bt_uplink_path_c" type="add"/>
+                <include pathname="common_bt_uplink_path_p" type="add"/>
+            </includes>
+        </path>
+        <path name="common_bt_downlink_path_c" dir="capture"  mode="" period="" rate="">
+            <connections>
+                <connection from="[device]:pcmBtHfp_dl_pre_c" outchmap="" to="[module]:sse_bt_call_dl" inchmap=""/>
+                <connection from="[module]:sse_bt_call_dl" outchmap="" to="[tmodule]:bt_loopback_dl" inchmap=""/>
+            </connections>
+        </path>
+        <path name="common_bt_downlink_path_p" dir="playback"  mode="" period="" rate="">
+            <connections>
+                <connection from="[tmodule]:bt_loopback_dl" outchmap="" to="[device]:pcmHfp_dl_p" inchmap=""/>
+            </connections>
+        </path>
+        <path name="Bt_Downlink_8k" dir=""  mode="" period="" rate="">
+            <includes>
+                <include pathname="common_bt_downlink_path_c" type="add"/>
+                <include pathname="common_bt_downlink_path_p" type="add"/>
+            </includes>
+        </path>
+        <path name="Bt_Downlink_16k" dir=""  mode="" period="" rate="">
+            <includes>
+                <include pathname="common_bt_downlink_path_c" type="add"/>
+                <include pathname="common_bt_downlink_path_p" type="add"/>
+            </includes>
+        </path>
+    </pathconf>
+    <xi:include href="audio_processing_configuration.xml"/>
+</audioRoutingConfiguration>
